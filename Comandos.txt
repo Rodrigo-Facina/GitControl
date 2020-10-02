@@ -1,11 +1,18 @@
 "Git Bash"
 
+COPIA E COLA
+SHIFT + INSERT
+
 // Execute o comando git init para inicializar um repositório Git;
     git init 
 
 // Execute o comando git status para garantir que você está em um repositório Git
 // e que o arquivo index.html é reconhecido. Leia com calma a saída deste comando
     git status
+
+    //HEAD: Estado atual do nosso código, ou seja, onde o Git nos colocou
+    //Working tree: Local onde os arquivos realmente estão sendo armazenados e editados
+    //Index: Local onde o Git armazena o que será commitado, ou seja, o local entre a working tree e o repositório Git em si.
 
 //Adicionando pend
 //Com isso, se rodarmos git status, desta vez teremos um retorno diferente, incluindo Changes to committed
@@ -18,10 +25,22 @@
     git commit -m "Criando arquivo index.html com lista de cursos"
 
 //Usaremos clear para limparmos a tela
-clera    
+    clear
+
+//Historico que nos mostrará diversas informações,
+    git log 
+    git log -- oneline
+    git log -p
 
 
+//Alterando configurações
+//para cada projeto, ou, para a máquina toda, utilizando o git 
+    git config --local
 
+    git config --global
+
+    git config --local user.name "Nomezão "
+    git config --local user.email "E-mailZão"
 
 
 
