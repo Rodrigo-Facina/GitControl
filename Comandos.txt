@@ -1,0 +1,29 @@
+
+
+Git Bash
+
+// execute o comando git init para inicializar um repositório Git;
+git init 
+
+// Execute o comando git status para garantir que você está em um repositório Git
+// e que o arquivo index.html é reconhecido. Leia com calma a saída deste comando
+git status
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
