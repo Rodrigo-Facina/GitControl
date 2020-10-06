@@ -3,6 +3,8 @@
 COPIA E COLA
 SHIFT + INSERT
 
+cd C:/T-Systems/Cursos/Alura/Git\ e\ Github
+
 // Execute o comando git init para inicializar um repositório Git;
     git init 
     git init --bare (só contem as alterações / nao entrar aqui p/ editrar /não contem copias fisica /PURO)
@@ -15,6 +17,10 @@ SHIFT + INSERT
     // Exibir o nome e o local
     git remote -v (fetch e push - onde busco e mando)
 
+    //depois alterar o nome padroa de origem
+    git remote rename "nomeDe" "NomePara"
+    git remote rename origin local
+
     // CLONAR PARA OUTRA MAQUINA ou pessoa
     // dentro da pasta que vai receber a clonagem (onde as copias vão ser enviadas)
     git clone "URL" "Nome opcional"
@@ -22,7 +28,8 @@ SHIFT + INSERT
     //PUSH - como enviar push nome do servidor e o branch (master)
     git push "NOMESEMASPAS" master
 
-    
+    //PULL - como buscar pull nome do servidor e o branch (master no caso)
+    git push "NOMESEMASPAS" master
 
 
 // Execute o comando git status para garantir que você está em um repositório Git
@@ -64,6 +71,87 @@ SHIFT + INSERT
 
 // Criar pasta
     mkdir NOMEPASTA
+
+// Verificcar branch
+    git branch
+    git branch NOMEDONOVOBRNACH //cria branch
+    git checkout NOMEDOBRNACH   //MUDA para outro branch
+
+    OU
+
+    git checkout -b NOMEDONOVOBRNACH //cria e muda prar novo branch
+
+====================================================
+                MERGE DE BRANCH
+====================================================
+// JUNÇÂO DE branch MERGE
+    //atual exemplo master
+    commit merge NOMEDAOUTRA
+    // dois pontos / X / ENTER
+
+====================================================
+
+====================================================
+                REBASE DE BRANCH
+====================================================
+// Tranferencia DE branch por commits
+    //rebaseia o que foi feit o tranferindo os commits de / para 
+    git rebase NOMEDAOUTRA
+    // dois pontos / X / ENTER
+
+====================================================
+
+    // Desfazer a linha
+
+    git checkout -- <file>
+
+    //Desfazer marcação de commit
+
+    git reset HEAD <file>
+
+    //alteração e commit / Hast do commit
+    git revert <hash>
+
+====================================================
+
+    // Salva em um lugar temporareo
+
+    git stash
+    git stash list
+    git stash apply <numero> //aplicar
+    git stash drop //remover da stash
+    git stash pop //aplica a ultima stash e remove ela da lista de stash
+
+
+    // Retornar / navegar em commits
+
+    git checkout <COMIT Hast>
+    //des-anexado está em um commit, nao mais em uma linha 
+    // se quiser commitar a partir de alguma alteração feita aqui tem de ccriar um novo branch
+    // antes de ficar desanexado solto 
+
+====================================================
+    // Diferença seja ela do atual(o que foi modificado)    
+    git diff
+    git diff <hash 1>..<hash 2>
+
+====================================================
+criando marcos na aplicação como versoes
+pelo uso de tags
+    // -a Adicionando
+    git tag -a <v0.1.0> escrver texto 
+    -m <mensagem lançado versao beta exemplo>
+
+    // listar tag atuais utilizando que foram usadas
+    git tag
+
+
+    // consigo mandar as tag pelos comandos abaxio como no github
+    git push local master
+    git push local v0.1.0
+
+    VISUALIZAR NO GIT HUB
+
 
 
 
